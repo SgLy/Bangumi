@@ -33,6 +33,7 @@ data class TopicPost(
 ) : BaseExpandNode() {
     init {
         isExpanded = true
+        pst_content = pst_content.trim()
     }
 
     val editable get() = UserModel.current()?.username == username && children.size == 0
